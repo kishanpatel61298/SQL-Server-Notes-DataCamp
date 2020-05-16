@@ -215,15 +215,13 @@ OR release_year > 2000;
 > FROM grid;
 
 
-+-------------------------------+-----------------------+
 | description                  | first_20_left          |
-|-------------------------------+-----------------------|
+|------------------------------|-----------------------|
 | Severe Weather Thunderstorms | Severe Weather Thun    |
 | Severe Weather Thunderstorms | Severe Weather Thun    |
 | Severe Weather Thunderstorms | Severe Weather Thun    |
 | Fuel Supply Emergency Coal   | Fuel Supply Emergenc   |
 | Physical Attack Vandalism    | Physical Attack Van    |
-+-------------------------------+-----------------------+
 
 ## RIGHT (Retrun n characters from right side of string)
 
@@ -234,7 +232,7 @@ OR release_year > 2000;
 
 +-------------------------------+----------------------+
 | description                   | last_20              |
-|-------------------------------+----------------------|
+|-------------------------------|----------------------|
 | Severe Weather Thunderstorms  | ather Thunderstorms  |
 | Severe Weather Thunderstorms  | ather Thunderstorms  |
 | Severe Weather Thunderstorms  | ather Thunderstorms  |
@@ -249,7 +247,7 @@ OR release_year > 2000;
 > FROM courses;
 +---------------+-------------------------------------+
 | char_location | url                                 |
-|---------------+-------------------------------------|
+|---------------|-------------------------------------|
 | 34            | datacamp.com/courses/introduction_  |
 | 34            | datacamp.com/courses/intermediate_  |
 | 29            | datacamp.com/courses/writing_       |
@@ -268,7 +266,7 @@ OR release_year > 2000;
 
 +------------------+----------------------------------+
 | target_section   | url                              |
-+------------------+----------------------------------+
++------------------|----------------------------------+
 | datacamp.com     |https//www.datacamp.com/courses   |
 +------------------+----------------------------------+
 
@@ -283,7 +281,7 @@ OR release_year > 2000;
 
 +-------------------------------------+
 | replace_with_hyphen                 |
-+-------------------------------------|
+|-------------------------------------|
 | datacamp.com/courses/introduction-  |
 | datacamp.com/courses/intermediate-  |
 | datacamp.com/courses/writing-       |
