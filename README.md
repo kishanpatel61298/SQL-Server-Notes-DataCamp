@@ -214,6 +214,7 @@ OR release_year > 2000;
 > LEFT(description, 20) AS first_20_left
 > FROM grid;
 
+
 +-------------------------------+-----------------------+
 | description                  | first_20_left          |
 |-------------------------------+-----------------------|
@@ -229,6 +230,8 @@ OR release_year > 2000;
 > SELECT description,
 > RIGHT(description, 20) AS last_20
 > FROM grid;
+
+
 +-------------------------------+----------------------+
 | description                   | last_20              |
 |-------------------------------+----------------------|
@@ -261,6 +264,8 @@ OR release_year > 2000;
 > FROM courses;
 
 *In this case, 12 character from index 12.*
+
+
 +------------------+----------------------------------+
 | target_section   | url                              |
 +------------------+----------------------------------+
@@ -274,6 +279,8 @@ OR release_year > 2000;
 > FROM courses;
 
 *In out case, replace _ with -*
+
+
 +-------------------------------------+
 | replace_with_hyphen                 |
 +-------------------------------------|
