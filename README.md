@@ -58,27 +58,27 @@ descending order. After that "product_id" will be sorted in ascending order acco
 > WHERE total > 15;
 
 
-*Rows with points greater than 10
+*Rows with points greater than 10*
 > WHERE points > 10
 
 
-*Rows with points less than 10
+*Rows with points less than 10*
 >WHERE points < 10
 
 
-*Rows with points greater than or equal to 10
+*Rows with points greater than or equal to 10*
 > WHERE points >= 10
 
 
-*Rows with points less than or equal to 20
+*Rows with points less than or equal to 20*
 > WHERE points <= 20
 
 
-*Character data type
+*Character data type*
 > WHERE country = 'Spain'
 
 
-*Date data type
+*Date data type*
 > WHERE event_date = '2012-01-02'
 
 
@@ -105,27 +105,22 @@ descending order. After that "product_id" will be sorted in ascending order acco
 *NULL indicates there is no value for that record*
 *NULLs help highlight gaps in our data*
 
-SELECT
-TOP (6) total,
-billing_state
-FROM invoice
-WHERE billing_state IS NULL;
+> SELECT TOP (6) total, billing_state FROM invoice
+> WHERE billing_state IS NULL;
+
 
 **NOT NULL**
-SELECT
-TOP (6) total,
-billing_state
-FROM invoice
-WHERE billing_state IS NOT NULL;
+> SELECT TOP (6) total, billing_state FROM invoice
+> WHERE billing_state IS NOT NULL;
+
 
 **AND/OR for multiple conditions**
-SELECT song, artist
-FROM songlist
-WHERE
-artist = 'AC/DC'
-AND release_year < 1980;
+> SELECT song, artist FROM songlist 
+> WHERE artist = 'AC/DC' AND release_year < 1980;
+
 
 **Using paranthesis ( )**
+
 
 **Poblem: 
 
@@ -140,34 +135,33 @@ OR release_year > 2000;
                                            
 **Answer:**
 
-SELECT song
-FROM songlist
-WHERE
-artist = 'Green Day'
-AND (release_year = 1994
-OR release_year > 2000);
+> SELECT song FROM songlist
+> WHERE artist = 'Green Day'
+> AND (release_year = 1994
+> OR release_year > 2000);
 
-**Another way of writing the query:
 
-SELECT song
-FROM songlist
-WHERE (artist = 'Green Day'
-AND release_year = 1994)
-OR (artist = 'Green Day'
-AND release_year > 2000);
+**Another way of writing the query:**
+
+> SELECT song FROM songlist WHERE 
+> (artist = 'Green Day'
+> AND release_year = 1994)
+> OR 
+> (artist = 'Green Day'
+> AND release_year > 2000);
+
 
 **IN (Other form of OR)**
-SELECT song, release_year
-FROM songlist
-WHERE
-release_year IN (1985, 1991, 1992);
+
+> SELECT song, release_year FROM songlist
+> WHERE release_year IN (1985, 1991, 1992);
 
 ***Can be read as 1985 or 1991 or 1992***
 
+
 **LIKE**
 
-SELECT song
-FROM songlist
-WHERE song LIKE 'a%';
+> SELECT song FROM songlist
+> WHERE song LIKE 'a%';
 
 ***Return songs start with "a"***
