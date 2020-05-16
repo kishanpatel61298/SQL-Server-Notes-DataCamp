@@ -459,7 +459,7 @@ INNER JOIN artist on artist.artist_id = album.artist_id;
 - Returns all combinations of all matches between album and artist
 
 | album_id | title | artist_id | artist_name |
-|----------|---------------------------------------|-----------|
+|----------|---------------|------------------------|-----------|
 | 1 | For Those About To Rock | 1 | AC/DC |
 | 4 | Let There Be Rock | 1 | AC/DC |
 | 2 | Balls To The Wall | 2 | Accept |
