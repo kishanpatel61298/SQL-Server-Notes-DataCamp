@@ -10,7 +10,7 @@ SELECT TOP(5) PERCENT artist FROM artists;
 -- Return unique rows
 SELECT DISTINCT nerc_region FROM grid;
 
---Aliasing column names with AS
+--Aliasing column names with AS --Simply return column with Aliase name
 SELECT demand_loss_mw AS lost_demand FROM grid;
 +-------------+
 | lost_demand |
@@ -22,3 +22,14 @@ SELECT demand_loss_mw AS lost_demand FROM grid;
 | 3900        |
 | 3300        |
 +-------------+
+
+--ORDER BY
+
+SELECT TOP (10) product_id, year_intro
+FROM products
+ORDER BY year_intro DESC, product_id;
+
+--DESC keyword will sort the column(yesr_intro) in descending order. If there is no explicite keyword is mentioned,
+then it will sort column(product_id) in ascending order.
+--In above query, there are multiple columns to sort with. So, execution will start by first sorting "year_intro" in 
+descending order. After that "product_id" will be sorted in ascending order accordingly.
