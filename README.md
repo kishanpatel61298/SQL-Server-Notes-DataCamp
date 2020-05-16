@@ -11,25 +11,29 @@ This notes contain all sql queries from SQL Server course on DataCamp along with
 *Return 5 rows - Can change the number of rows*
 
 ```SQL
-SELECT TOP(5) artist FROM artists;```
+SELECT TOP(5) artist FROM artists;
+```
 
 
 *Return top 5% of rows*
 
 ```SQL
-SELECT TOP(5) PERCENT artist FROM artists;```
+SELECT TOP(5) PERCENT artist FROM artists;
+```
 
 
 *Return unique rows*
 
 ```SQL
-SELECT DISTINCT nerc_region FROM grid;```
+SELECT DISTINCT nerc_region FROM grid;
+```
 
 
 *Aliasing column names with AS --Simply return column with Aliase name*
 
 ```SQL
-SELECT demand_loss_mw AS lost_demand FROM grid;```
+SELECT demand_loss_mw AS lost_demand FROM grid;
+```
 
 | lost_demand |
 |-------------|
@@ -64,32 +68,38 @@ descending order. After that "product_id" will be sorted in ascending order acco
 
 *Rows with points greater than 10*
 ```SQL
-WHERE points > 10```
+WHERE points > 10
+```
 
 
 *Rows with points less than 10*
 ```SQL
-WHERE points < 10```
+WHERE points < 10
+```
 
 
 *Rows with points greater than or equal to 10*
 ```SQL
-WHERE points >= 10```
+WHERE points >= 10
+```
 
 
 *Rows with points less than or equal to 20*
 ```SQL
-WHERE points <= 20```
+WHERE points <= 20
+```
 
 
 *Character data type*
 ```SQL
-WHERE country = 'Spain'```
+WHERE country = 'Spain'
+```
 
 
 *Date data type*
 ```SQL
-WHERE event_date = '2012-01-02'```
+WHERE event_date = '2012-01-02'
+```
 
 
 **For not-equal, use "<>" just like != in JAVA
