@@ -182,7 +182,7 @@ OR release_year > 2000;
 > SELECT COUNT(affected_customers) AS count_affected
 > FROM grid;
 
-*To count only unique entries
+*To count only unique entries*
 
 > SELECT COUNT(DISTINCT affected_customers) AS unique_count_affected
 > FROM grid;
@@ -202,3 +202,84 @@ OR release_year > 2000;
 > SELECT AVG(affected_customers) AS avg_affected_customers
 > FROM grid;
 
+## LEN (Length of string)
+
+> SELECT description, 
+> LEN(description) AS description_length
+> FROM grid;
+
+## LEFT (Retrun n characters from left side of string)
+
+> SELECT description,
+> LEFT(description, 20) AS first_20_left
+> FROM grid;
+
++-------------------------------+-----------------------+
+| description                  | first_20_left          |
+|-------------------------------+-----------------------|
+| Severe Weather Thunderstorms | Severe Weather Thun    |
+| Severe Weather Thunderstorms | Severe Weather Thun    |
+| Severe Weather Thunderstorms | Severe Weather Thun    |
+| Fuel Supply Emergency Coal   | Fuel Supply Emergenc   |
+| Physical Attack Vandalism    | Physical Attack Van    |
++-------------------------------+-----------------------+
+
+## RIGHT (Retrun n characters from right side of string)
+
+> SELECT description,
+> RIGHT(description, 20) AS last_20
+> FROM grid;
++-------------------------------+----------------------+
+| description                   | last_20              |
+|-------------------------------+----------------------|
+| Severe Weather Thunderstorms  | ather Thunderstorms  |
+| Severe Weather Thunderstorms  | ather Thunderstorms  |
+| Severe Weather Thunderstorms  | ather Thunderstorms  |
+| Fuel Supply Emergency Coal    | pply Emergency Coal  |
+| Physical Attack Vandalism     | al Attack Vandalism  |
++-------------------------------+----------------------+
+
+## CHARINDEX (Return index of first accurance of specified character)
+
+> SELECT
+> CHARINDEX ('_', url) AS char_location, url
+> FROM courses;
++---------------+-------------------------------------+
+| char_location | url                                 |
+|---------------+-------------------------------------|
+| 34            | datacamp.com/courses/introduction_  |
+| 34            | datacamp.com/courses/intermediate_  |
+| 29            | datacamp.com/courses/writing_       |
+| 29            | datacamp.com/courses/joining_       |
+| 27            | datacamp.com/courses/intro_         |
++---------------+-------------------------------------+
+
+## SUBSTRING 
+
+> SELECT
+> SUBSTRING(url, 12, 12) AS target_section, url
+> FROM courses;
+
+*In this case, 12 character from index 12.*
++------------------+----------------------------------+
+| target_section   | url                              |
++------------------+----------------------------------+
+| datacamp.com     |https//www.datacamp.com/courses   |
++------------------+----------------------------------+
+
+## REPLACE
+
+> SELECT
+> TOP(5) REPLACE(url, '_' , '-') AS replace_with_hyphen
+> FROM courses;
+
+*In out case, replace _ with -*
++-------------------------------------+
+| replace_with_hyphen                 |
++-------------------------------------|
+| datacamp.com/courses/introduction-  |
+| datacamp.com/courses/intermediate-  |
+| datacamp.com/courses/writing-       |
+| datacamp.com/courses/joining-       |
+| datacamp.com/courses/intro-         |
++-------------------------------------+
