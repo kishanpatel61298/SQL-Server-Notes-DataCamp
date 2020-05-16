@@ -10,7 +10,7 @@ This notes contain all sql queries from SQL Server course on DataCamp along with
 
 *Return 5 rows - Can change the number of rows*
 
-> SELECT TOP(5) artist FROM artists;
+``` SELECT TOP(5) artist FROM artists;```
 
 
 *Return top 5% of rows*
