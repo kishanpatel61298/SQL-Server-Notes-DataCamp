@@ -51,7 +51,7 @@ then it will sort column(product_id) in ascending order.***
 descending order. After that "product_id" will be sorted in ascending order accordingly.***
 
 
-**What if we only wanted to return rows that met certain criteria?**
+## What if we only wanted to return rows that met certain criteria?
 
 > SELECT customer_id, total
 > FROM invoice
