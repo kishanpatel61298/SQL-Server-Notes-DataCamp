@@ -363,7 +363,7 @@ GROUP BY description;
 
 ## HAVING (Use as condition after GROUP BY)
 
-**Without HAVING
+**Without HAVING**
 
 ```SQL
 SELECT
@@ -385,7 +385,7 @@ GROUP BY description;
 | 1352 | Winter Storm |
 
 
-**Using HAVING
+**Using HAVING**
 
 ```SQL
 SELECT
@@ -404,7 +404,7 @@ HAVING SUM(demand_loss_mw) > 1000;
 | 1352 | Winter Storm |
 
 
-**Summary 
+**Summary **
 
 - GROUP BY splits the data up into combinations of one or more values
 - WHERE lters on row values
