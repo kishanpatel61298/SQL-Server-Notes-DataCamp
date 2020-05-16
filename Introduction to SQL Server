@@ -1,5 +1,7 @@
-SQL Server - relational database system developed by Microsoft
-Transact-SQL (T-SQL) - Microsoft's implementation of SQL, with additional functionality
+#Introduction to SQL- SELECTion Box
+
+**SQL Server - relational database system developed by Microsoft**
+**Transact-SQL (T-SQL) - Microsoft's implementation of SQL, with additional functionality**
 
 -- Return 5 rows -- Can change the number of rows
 SELECT TOP(5) artist FROM artists;
