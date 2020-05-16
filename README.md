@@ -13,15 +13,15 @@ SELECT TOP(5) artist FROM artists;
 
 *Return top 5% of rows*
 
-SELECT TOP(5) PERCENT artist FROM artists;
+> SELECT TOP(5) PERCENT artist FROM artists;
 
 *Return unique rows*
 
-SELECT DISTINCT nerc_region FROM grid;
+> SELECT DISTINCT nerc_region FROM grid;
 
 *Aliasing column names with AS --Simply return column with Aliase name*
 
-SELECT demand_loss_mw AS lost_demand FROM grid;
+>SELECT demand_loss_mw AS lost_demand FROM grid;
 
 | lost_demand |
 |-------------|
