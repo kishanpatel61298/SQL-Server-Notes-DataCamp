@@ -10,17 +10,20 @@ This notes contain all sql queries from SQL Server course on DataCamp along with
 
 *Return 5 rows - Can change the number of rows*
 
-``` SELECT TOP(5) artist FROM artists;```
+```SQL
+SELECT TOP(5) artist FROM artists;```
 
 
 *Return top 5% of rows*
 
-``` SELECT TOP(5) PERCENT artist FROM artists;```
+```
+SELECT TOP(5) PERCENT artist FROM artists;```
 
 
 *Return unique rows*
 
-``` SELECT DISTINCT nerc_region FROM grid;```
+```
+SELECT DISTINCT nerc_region FROM grid;```
 
 
 *Aliasing column names with AS --Simply return column with Aliase name*
