@@ -478,3 +478,64 @@ INNER JOIN table_B ON table_B.foreign_key = table_A.primary_key
 INNER JOIN table_C ON table_C.foreign_key = table_B.primary_key;
 ```
 
+## LEFT and RIGHT JOIN
+
+Admissions table
+
+| Patient_ID | Admitted |
+|------------|----------|
+| 1 | 1 |
+| 2 | 1 |
+| 3 | 1 |
+| 4 | 1 |
+| 5 | 1 |
+
+Discharges table
+
+| Patient_ID | Admitted |
+|------------|----------|
+| 1 | 1 |
+| 3 | 1 |
+| 4 | 1 |
+
+**LEFT JOIN**
+```SQL
+SELECT
+Admitted.Patient_ID,
+Admitted,
+Discharged
+FROM Admitted
+LEFT JOIN Discharged ON Discharged.Patient_ID = Admitted.Patient_ID;
+```
+| Patient_ID | Admitted | Discharged |
+|------------|----------|------------|
+| 1 | 1 | 1 |
+| 2 | 1 | NULL |
+| 3 | 1 | 1 |
+| 4 | 1 | 1 |
+| 5 | 1 | NULL |
+
+**RIGHT JOIN**
+```SQL
+SELECT
+Admitted.Patient_ID,
+Admitted,
+Discharged
+FROM Discharged
+RIGHT JOIN Admitted ON Admitted.Patient_ID = Discharged.Patient_ID;
+```
+
+| Patient_ID | Admitted | Discharged |
+|------------|----------|------------|
+| 1 | 1 | 1 |
+| 2 | 1 | NULL |
+| 3 | 1 | 1 |
+| 4 | 1 | 1 |
+| 5 | 1 | NULL |
+
+## Summary
+
+- INNER JOIN : Only returns matching rows
+- LEFT JOIN (or RIGHT JOIN ): All rows from the main table plus matches from the joining table
+- NULL : Displayed if no match is found
+- LEFT JOIN and RIGHT JOIN can be interchangeable
