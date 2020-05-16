@@ -97,7 +97,7 @@ artist = 'AC/DC'
 AND release_year < 1980;
 
 --Using paranthesis ( )
-Poblem
+Poblem: 
 
 SELECT *                                  SELECT * FROM songlist                                                                                     
 FROM songlist                             WHERE artist = 'Green Day'
@@ -107,3 +107,37 @@ AND release_year = 1994      ----->                OR
 OR release_year > 2000;                              
                                            SELECT * FROM songlist 
                                            WHERE release_year > 2000;
+                                           
+Answer:
+
+SELECT song
+FROM songlist
+WHERE
+artist = 'Green Day'
+AND (release_year = 1994
+OR release_year > 2000);
+
+Another way of writing the query:
+
+SELECT song
+FROM songlist
+WHERE (artist = 'Green Day'
+AND release_year = 1994)
+OR (artist = 'Green Day'
+AND release_year > 2000);
+
+--IN (Other form of OR)
+SELECT song, release_year
+FROM songlist
+WHERE
+release_year IN (1985, 1991, 1992);
+
+Can be read as 1985 or 1991 or 1992
+
+--LIKE
+
+SELECT song
+FROM songlist
+WHERE song LIKE 'a%';
+
+Return songs start with "a"
