@@ -8,28 +8,28 @@ This notes contain all sql queries from SQL Server course on DataCamp along with
 **Transact-SQL (T-SQL) - Microsoft's implementation of SQL, with additional functionality**
 
 
-*Return 5 rows - Can change the number of rows*
+- *Return 5 rows - Can change the number of rows*
 
 ```SQL
 SELECT TOP(5) artist FROM artists;
 ```
 
 
-*Return top 5% of rows*
+- *Return top 5% of rows*
 
 ```SQL
 SELECT TOP(5) PERCENT artist FROM artists;
 ```
 
 
-*Return unique rows*
+- *Return unique rows*
 
 ```SQL
 SELECT DISTINCT nerc_region FROM grid;
 ```
 
 
-*Aliasing column names with AS --Simply return column with Aliase name*
+- *Aliasing column names with AS --Simply return column with Aliase name*
 
 ```SQL
 SELECT demand_loss_mw AS lost_demand FROM grid;
@@ -66,37 +66,37 @@ descending order. After that "product_id" will be sorted in ascending order acco
  WHERE total > 15;
 ```
 
-*Rows with points greater than 10*
+- *Rows with points greater than 10*
 ```SQL
 WHERE points > 10
 ```
 
 
-*Rows with points less than 10*
+- *Rows with points less than 10*
 ```SQL
 WHERE points < 10
 ```
 
 
-*Rows with points greater than or equal to 10*
+- *Rows with points greater than or equal to 10*
 ```SQL
 WHERE points >= 10
 ```
 
 
-*Rows with points less than or equal to 20*
+- *Rows with points less than or equal to 20*
 ```SQL
 WHERE points <= 20
 ```
 
 
-*Character data type*
+- *Character data type*
 ```SQL
 WHERE country = 'Spain'
 ```
 
 
-*Date data type*
+- *Date data type*
 ```SQL
 WHERE event_date = '2012-01-02'
 ```
