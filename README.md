@@ -229,8 +229,6 @@ OR release_year > 2000;
 > RIGHT(description, 20) AS last_20
 > FROM grid;
 
-
-+-------------------------------+----------------------+
 | description                   | last_20              |
 |-------------------------------|----------------------|
 | Severe Weather Thunderstorms  | ather Thunderstorms  |
@@ -238,14 +236,14 @@ OR release_year > 2000;
 | Severe Weather Thunderstorms  | ather Thunderstorms  |
 | Fuel Supply Emergency Coal    | pply Emergency Coal  |
 | Physical Attack Vandalism     | al Attack Vandalism  |
-+-------------------------------+----------------------+
+
 
 ## CHARINDEX (Return index of first accurance of specified character)
 
 > SELECT
 > CHARINDEX ('_', url) AS char_location, url
 > FROM courses;
-+---------------+-------------------------------------+
+
 | char_location | url                                 |
 |---------------|-------------------------------------|
 | 34            | datacamp.com/courses/introduction_  |
@@ -253,7 +251,7 @@ OR release_year > 2000;
 | 29            | datacamp.com/courses/writing_       |
 | 29            | datacamp.com/courses/joining_       |
 | 27            | datacamp.com/courses/intro_         |
-+---------------+-------------------------------------+
+
 
 ## SUBSTRING 
 
@@ -263,12 +261,10 @@ OR release_year > 2000;
 
 *In this case, 12 character from index 12.*
 
-
-+------------------+----------------------------------+
 | target_section   | url                              |
-+------------------|----------------------------------+
+|------------------|----------------------------------|
 | datacamp.com     |https//www.datacamp.com/courses   |
-+------------------+----------------------------------+
+
 
 ## REPLACE
 
@@ -279,7 +275,6 @@ OR release_year > 2000;
 *In out case, replace _ with -*
 
 
-+-------------------------------------+
 | replace_with_hyphen                 |
 |-------------------------------------|
 | datacamp.com/courses/introduction-  |
@@ -287,4 +282,4 @@ OR release_year > 2000;
 | datacamp.com/courses/writing-       |
 | datacamp.com/courses/joining-       |
 | datacamp.com/courses/intro-         |
-+-------------------------------------+
+
