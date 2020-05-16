@@ -167,3 +167,38 @@ OR release_year > 2000;
 > WHERE song LIKE 'a%';
 
 ***Return songs start with "a"***
+
+
+
+
+# Introduction to SQL- Groups, strings, and counting things
+
+## SUM 
+> SELECT SUM(affected_customers) AS total_affected
+> FROM grid;
+
+## COUNT
+
+> SELECT COUNT(affected_customers) AS count_affected
+> FROM grid;
+
+*To count only unique entries
+
+> SELECT COUNT(DISTINCT affected_customers) AS unique_count_affected
+> FROM grid;
+
+## MIN
+
+> SELECT MIN(affected_customers) AS min_affected_custome
+> FROM grid;
+
+## MAX
+
+> SELECT MAX(affected_customers) AS max_affected_customers
+> FROM grid;
+
+## AVG
+
+> SELECT AVG(affected_customers) AS avg_affected_customers
+> FROM grid;
+
