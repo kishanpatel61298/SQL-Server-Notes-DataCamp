@@ -89,19 +89,19 @@ descending order. After that "product_id" will be sorted in ascending order acco
 > WHERE total <> 10;
 
 
-**BETWEEN**
+##BETWEEN
 > SELECT customer_id, total
 > FROM invoice
 > WHERE total BETWEEN 20 AND 30;
 
 
-**NOT BETWEEN**
+##NOT BETWEEN
 > SELECT customer_id, total
 > FROM invoice
 > WHERE total NOT BETWEEN 20 AND 30;
 
 
-**NULL**
+##NULL
 *NULL indicates there is no value for that record*
 *NULLs help highlight gaps in our data*
 
@@ -109,20 +109,22 @@ descending order. After that "product_id" will be sorted in ascending order acco
 > WHERE billing_state IS NULL;
 
 
-**NOT NULL**
+##NOT NULL
+
 > SELECT TOP (6) total, billing_state FROM invoice
 > WHERE billing_state IS NOT NULL;
 
 
-**AND/OR for multiple conditions**
+##AND/OR for multiple conditions
+
 > SELECT song, artist FROM songlist 
 > WHERE artist = 'AC/DC' AND release_year < 1980;
 
 
-**Using paranthesis ( )**
+##Using paranthesis ( )
 
 
-**Poblem: 
+**Poblem:** 
 
 SELECT *                                  SELECT * FROM songlist
 FROM songlist                             WHERE artist = 'Green Day'
@@ -151,7 +153,7 @@ OR release_year > 2000;
 > AND release_year > 2000);
 
 
-**IN (Other form of OR)**
+##IN (Other form of OR)
 
 > SELECT song, release_year FROM songlist
 > WHERE release_year IN (1985, 1991, 1992);
@@ -159,7 +161,7 @@ OR release_year > 2000;
 ***Can be read as 1985 or 1991 or 1992***
 
 
-**LIKE**
+##LIKE
 
 > SELECT song FROM songlist
 > WHERE song LIKE 'a%';
