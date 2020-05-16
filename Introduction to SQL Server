@@ -1,0 +1,24 @@
+SQL Server - relational database system developed by Microsoft
+Transact-SQL (T-SQL) - Microsoft's implementation of SQL, with additional functionality
+
+-- Return 5 rows -- Can change the number of rows
+SELECT TOP(5) artist FROM artists;
+
+-- Return top 5% of rows
+SELECT TOP(5) PERCENT artist FROM artists;
+
+-- Return unique rows
+SELECT DISTINCT nerc_region FROM grid;
+
+--Aliasing column names with AS
+SELECT demand_loss_mw AS lost_demand FROM grid;
++-------------+
+| lost_demand |
+|-------------|
+| 424         |
+| 217         |
+| 494         |
+| 338         |
+| 3900        |
+| 3300        |
++-------------+
