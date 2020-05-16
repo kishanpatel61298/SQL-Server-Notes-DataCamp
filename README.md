@@ -409,3 +409,72 @@ HAVING SUM(demand_loss_mw) > 1000;
 - GROUP BY splits the data up into combinations of one or more values
 - WHERE lters on row values
 - HAVING appears after the GROUP BY clause and lters on groups or aggregates
+
+
+
+# Introduction to SQL- Joining tables
+
+- Primary keys: Uniquely identify each row in a table
+
+**artist Table**
+
+
+| artist_id | name |
+|-----------|-------------------|
+| 1 | AC/DC |
+| 2 | Accept |
+| 3 | Aerosmith |
+| 4 | Alanis Morissette |
+| 5 | Alice In Chains |
+
+**album table**
+| album_id | title | artist_id |
+|----------|-------------------------|-----------|
+| 1 | For Those About To Rock | 1 |
+| 2 | Balls to the Wall | 2 |
+| 3 | Restless and Wild | 2 |
+| 4 | Let There Be Rock | 1 |
+| 5 | Big Ones | 3 |
+
+## INNER JOIN
+
+**INNER JOIN syntax**
+
+```SQL
+SELECT
+table_A.columnX,
+table_A.columnY,
+table_B.columnZ
+FROM table_A
+INNER JOIN table_B ON table_B.foreign_key = table_A.primary_key;
+```
+
+```SQL
+SELECT
+album_id, title, album.artist_id,
+name AS artist_name
+FROM album
+INNER JOIN artist on artist.artist_id = album.artist_id;
+```
+- Returns all combinations of all matches between album and artist
+
+| album_id | title | artist_id | artist_name |
+|----------|---------------------------------------|-----------|
+| 1 | For Those About To Rock | 1 | AC/DC |
+| 4 | Let There Be Rock | 1 | AC/DC |
+| 2 | Balls To The Wall | 2 | Accept |
+| 3 | Restless and Wild | 2 | Accept |
+
+
+## Multiple INNER JOINS
+
+```SQL
+SELECT
+table_A.columnX,
+table_A.columnY,
+table_B.columnZ table_C columnW
+FROM table_A
+INNER JOIN table_B ON table_B.foreign_key = table_A.primary_key
+INNER JOIN table_C ON table_C.foreign_key = table_B.primary_key;
+```
+
