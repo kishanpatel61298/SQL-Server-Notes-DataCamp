@@ -99,7 +99,7 @@ AND release_year < 1980;
 --Using paranthesis ( )
 Poblem: 
 
-SELECT *                                  SELECT * FROM songlist                                                                                     
+SELECT *                                  SELECT * FROM songlist
 FROM songlist                             WHERE artist = 'Green Day'
 WHERE                                     AND release_year = 1994;
 artist = 'Green Day'
