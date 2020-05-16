@@ -539,3 +539,61 @@ RIGHT JOIN Admitted ON Admitted.Patient_ID = Discharged.Patient_ID;
 - LEFT JOIN (or RIGHT JOIN ): All rows from the main table plus matches from the joining table
 - NULL : Displayed if no match is found
 - LEFT JOIN and RIGHT JOIN can be interchangeable
+
+
+## UNION and UNION ALL
+
+*Mainly combine results of two or more table having same number of column and same data type.
+
+**UNION**
+```SQL
+SELECT album_id, title, artist_id
+FROM album
+WHERE artist_id IN (1, 3)
+UNION
+SELECT album_id, title, artist_id
+FROM album
+WHERE artist_id IN (1, 4, 5);
+```
+- Duplicate rows are excluded
+| album_id | title | artist_id |
+|------------|-------------------------|------------|
+| 1 | For Those About To Rock | 1 |
+| 4 | Let There Be Rock | 1 |
+| 5 | Big Ones | 3 |
+| 6 | Jagged Little Pill | 4 |
+| 7 | Facelift | 5 |
+
+**UNINON ALL**
+
+```SQL
+SELECT album_id, title, artist_id
+FROM album
+WHERE artist_id IN (1, 3)
+UNION ALL
+SELECT album_id, title, artist_id
+FROM album
+WHERE artist_id IN (1, 4, 5);
+```
+- Includes duplicate rows
+
+ album_id | title | artist_id |
+|------------|-------------------------|------------|
+| 1 | For Those About To Rock | 1 |
+| 4 | Let There Be Rock | 1 |
+| 5 | Big Ones | 3 |
+| 1 | For Those About To Rock | 1 |
+| 4 | Let There Be Rock | 1 |
+| 6 | Jagged Little Pill | 4 |
+| 7 | Facelift | 5 |
+
+## Summary
+
+- UNION or UNION ALL : Combines queries from the same table or different tables
+- If combining data from different tables:
+  - Select the same number of columns in the same order
+  - Columns should have the same data types
+-If source tables have different column names
+ -Alias the column names
+- UNION : Discards duplicates (slower to run)
+- UNION ALL : Includes duplicates (faster to run)
