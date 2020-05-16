@@ -349,7 +349,8 @@ AND demand_loss_mw IS NOT NULL
 GROUP BY description;
 ```
 
-* Result with no NULL*
+*Result with no NULL*
+
 | lost_demand | description |
 |-------------|--------------------------------------------|
 | 996 | Ice Storm |
