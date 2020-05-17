@@ -729,3 +729,17 @@ WHERE
 DROP TABLE #my_temp_table
 ```
 
+
+# What we learned...
+
+- Selecting: SELECT
+- Ordering: ORDER BY
+- Filtering: WHERE and HAVING
+- Aggregating: SUM , COUNT , MIN , MAX and AVG
+- Text manipulation: LEFT , RIGHT , LEN and SUBSTRING
+- GROUP BY
+- INNER JOIN , LEFT JOIN , RIGHT JOIN
+- UNION and UNION ALL
+- Create, Read, Update and Delete (CRUD)
+- Variables
+- Temporary tables
