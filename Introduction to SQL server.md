@@ -599,3 +599,133 @@ WHERE artist_id IN (1, 4, 5);
 - UNION : Discards duplicates (slower to run)
 - UNION ALL : Includes duplicates (faster to run)
 
+
+
+# Introduction to SQL Server: You've got the power
+
+## CRUD operations
+
+**CREATE**
+- Databases, Tables or views
+- Users, permissions, and security groups
+**READ**
+- Example: SELECT statements
+**UPDATE**
+- Amend existing database records
+**DELETE**
+
+## CREATE
+
+- CREATE TABLE unique table name
+-(column name, data type, size)
+```SQL
+CREATE TABLE test_table(
+test_date date,
+test_name varchar(20),
+test_int int)
+```
+
+## INSERT
+```SQL
+INSERT INTO table_name (col1, col2, col3)
+VALUES
+('value1','value2', value3)
+```
+```SQL
+INSERT INTO table_name (col1, col2, col3)
+SELECT
+ column1,
+ column2,
+ column3
+FROM other_table
+WHERE
+ -- conditions apply
+```
+- Don't use SELECT *
+- Be specic in case table structure changes
+
+## UPDATE
+```SQL
+UPDATE table
+SET column = value,
+WHERE
+-- Condition(s);
+```
+- Don't forget the WHERE clause!
+```SQL
+UPDATE table
+SET
+column1 = value1,
+column2 = value2
+WHERE
+-- Condition(s);
+```
+
+## DELETE
+```SQL
+DELETE
+FROM table
+WHERE
+-- Conditions
+```
+```SQL
+TRUNCATE TABLE table_name
+```
+***Clears the entire table at once***
+
+
+## Variable
+
+###### DECLARE
+
+**Integer variable:**
+```SQL
+DECLARE @test_int INT
+```
+**Varchar variable:**
+```SQL
+DECLARE @my_artist VARCHAR(100)
+```
+
+## SET
+
+**Integer variable:**
+```SQL
+DECLARE @test_int INT
+SET @test_int = 5
+```
+**Assign value to @my_artist :**
+```SQL
+DECLARE @my_artist varchar(100)
+SET @my_artist = 'AC/DC'
+```
+
+```SQL
+DECLARE @my_artist varchar(100)
+DECLARE @my_album varchar(300);
+
+SET @my_artist = 'AC/DC'
+SET @my_album = 'Let There Be Rock' ;
+
+SELECT --
+FROM --
+WHERE artist = @my_artist
+AND album = @my_album;
+```
+
+## Temporary tables
+```SQL
+SELECT
+ col1,
+ col2,
+ col3 INTO #my_temp_table
+FROM my_existing_table
+WHERE
+-- Conditions
+```
+***#my_temp_table exists until connection or session ends***
+- Remove table manually
+```SQL
+DROP TABLE #my_temp_table
+```
+
